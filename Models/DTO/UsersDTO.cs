@@ -8,8 +8,11 @@ namespace p4.Models.DTO
         
         public int Id { get; set; }
         public string email { get; set; }
+        public string username { get; set; }
 
-        
+        public string photo { get; set; }
+        public DateTime last_seen { get; set; }
+
         public Role role { get; set; }
     }
 }

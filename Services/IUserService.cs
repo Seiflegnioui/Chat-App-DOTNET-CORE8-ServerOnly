@@ -7,7 +7,7 @@ namespace p4.Services
     {
         Task<List<UsersDTO>> IndexAsyn();
         Task<User> RegisterAsync(UserDTO request);
-        Task<string> LoginAsync(UserDTO request);
+        Task<string> LoginAsync(LoginDTO request);
         Task<User> CurrentUser();
     }
 }

@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\Learning\\DOTNET\\P4 - Websockets\\p4\\wwwroot\\uploads\\achrafhakimi-301fdcd5-1a09-4a58-a351-9c20ebbda1e2.png",
+      "PackagePath": "staticwebassets\\uploads\\achrafhakimi-301fdcd5-1a09-4a58-a351-9c20ebbda1e2.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\Learning\\DOTNET\\P4 - Websockets\\p4\\wwwroot\\uploads\\seiflegnioui-aea23317-874b-4b25-a731-0f0bc15db079.jpg",
+      "PackagePath": "staticwebassets\\uploads\\seiflegnioui-aea23317-874b-4b25-a731-0f0bc15db079.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\Learning\\DOTNET\\P4 - Websockets\\p4\\wwwroot\\uploads\\seiflegnioui-db5e4e4a-bf50-4ac2-bfe6-d3aa7ffbb585.jpg",
+      "PackagePath": "staticwebassets\\uploads\\seiflegnioui-db5e4e4a-bf50-4ac2-bfe6-d3aa7ffbb585.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.P4 - Websockets.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.P4 - Websockets.props",
+      "PackagePath": "build\\P4 - Websockets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.P4 - Websockets.props",
+      "PackagePath": "buildMultiTargeting\\P4 - Websockets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.P4 - Websockets.props",
+      "PackagePath": "buildTransitive\\P4 - Websockets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

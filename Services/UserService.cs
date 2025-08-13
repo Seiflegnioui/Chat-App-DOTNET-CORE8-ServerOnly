@@ -12,7 +12,7 @@ using p4.Models.Entities;
 
 namespace p4.Services
 {
-    public class UserService(IConfiguration config, AppDbContext context, IHttpContextAccessor http) : IUserService
+    public class UserService(IConfiguration config,ILogger<UserService> logger ,AppDbContext context, IHttpContextAccessor http) : IUserService
     {
         public async Task<User> CurrentUser()
         {
@@ -41,11 +41,15 @@ namespace p4.Services
             {
                 Id = u.Id,
                 email = u.Email,
-                role = u.role
+                role = u.role,
+                photo = u.photo,
+                username = u.username,
+                last_seen = u.last_seen
+
             }).ToListAsync();
 
         }
-        public async Task<string> LoginAsync(UserDTO request)
+        public async Task<string> LoginAsync(LoginDTO request)
         {
 
             var user = await context.Users.FirstOrDefaultAsync(u => u.Email == request.email);
@@ -69,11 +73,24 @@ namespace p4.Services
             {
                 return null;
             }
+            var folder_path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
+            if (!Directory.Exists(folder_path))
+                Directory.CreateDirectory(folder_path);
 
+            var filename = request.username +"-" + Guid.NewGuid().ToString() + Path.GetExtension(request.photo.FileName);
+            var filepath = Path.Combine(folder_path, filename);
+
+            using (var stream = new FileStream(filepath, FileMode.Create))
+            {
+                await request.photo.CopyToAsync(stream);
+            }
             var user = new User();
             var hashed = new PasswordHasher<User>().HashPassword(user, request.password);
             user.HashedPassword = hashed;
             user.Email = request.email;
+            user.photo = filename;
+            user.username = request.username;
+            user.last_seen = request.last_seen;
 
             try
             {

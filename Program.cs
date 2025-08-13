@@ -122,7 +122,7 @@ app.MapHub<ChatHub>("/chat");
 app.UseAuthentication();
 app.UseCustomDebuger();
 app.UseAuthorization();
-
+app.UseStaticFiles();
 app.MapControllers();
 
 app.Run();

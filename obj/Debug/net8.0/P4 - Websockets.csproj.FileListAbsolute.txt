@@ -236,3 +236,5 @@ C:\Users\PC\Desktop\Learning\DOTNET\P4 - Websockets\p4\obj\Debug\net8.0\scopedcs
 C:\Users\PC\Desktop\Learning\DOTNET\P4 - Websockets\p4\obj\Debug\net8.0\P4 - Web.06B3C6C7.Up2Date
 C:\Users\PC\Desktop\Learning\DOTNET\P4 - Websockets\p4\obj\Debug\net8.0\P4 - Websockets.genruntimeconfig.cache
 C:\Users\PC\Desktop\Learning\DOTNET\P4 - Websockets\p4\obj\Debug\net8.0\ref\P4 - Websockets.dll
+C:\Users\PC\Desktop\Learning\DOTNET\P4 - Websockets\p4\obj\Debug\net8.0\P4 - Websockets.sourcelink.json
+C:\Users\PC\Desktop\Learning\DOTNET\P4 - Websockets\p4\bin\Debug\net8.0\P4 - Websockets.staticwebassets.runtime.json

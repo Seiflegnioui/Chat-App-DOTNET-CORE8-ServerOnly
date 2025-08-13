@@ -1,11 +1,77 @@
 {
   "Version": 1,
-  "Hash": "l5gcxAbMMJEhU95mi+k2ciuK5iyhD3smTLewkU9HudE=",
+  "Hash": "qYzUa4vdnUGZayKLTvIFCTAvW1ss3szjPye5QoaB6tQ=",
   "Source": "P4 - Websockets",
   "BasePath": "_content/P4 - Websockets",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "P4 - Websockets\\wwwroot",
+      "Source": "P4 - Websockets",
+      "ContentRoot": "C:\\Users\\PC\\Desktop\\Learning\\DOTNET\\P4 - Websockets\\p4\\wwwroot\\",
+      "BasePath": "_content/P4 - Websockets",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\PC\\Desktop\\Learning\\DOTNET\\P4 - Websockets\\p4\\wwwroot\\uploads\\achrafhakimi-301fdcd5-1a09-4a58-a351-9c20ebbda1e2.png",
+      "SourceId": "P4 - Websockets",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Desktop\\Learning\\DOTNET\\P4 - Websockets\\p4\\wwwroot\\",
+      "BasePath": "_content/P4 - Websockets",
+      "RelativePath": "uploads/achrafhakimi-301fdcd5-1a09-4a58-a351-9c20ebbda1e2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\achrafhakimi-301fdcd5-1a09-4a58-a351-9c20ebbda1e2.png"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Desktop\\Learning\\DOTNET\\P4 - Websockets\\p4\\wwwroot\\uploads\\seiflegnioui-aea23317-874b-4b25-a731-0f0bc15db079.jpg",
+      "SourceId": "P4 - Websockets",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Desktop\\Learning\\DOTNET\\P4 - Websockets\\p4\\wwwroot\\",
+      "BasePath": "_content/P4 - Websockets",
+      "RelativePath": "uploads/seiflegnioui-aea23317-874b-4b25-a731-0f0bc15db079.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\seiflegnioui-aea23317-874b-4b25-a731-0f0bc15db079.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Desktop\\Learning\\DOTNET\\P4 - Websockets\\p4\\wwwroot\\uploads\\seiflegnioui-db5e4e4a-bf50-4ac2-bfe6-d3aa7ffbb585.jpg",
+      "SourceId": "P4 - Websockets",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Desktop\\Learning\\DOTNET\\P4 - Websockets\\p4\\wwwroot\\",
+      "BasePath": "_content/P4 - Websockets",
+      "RelativePath": "uploads/seiflegnioui-db5e4e4a-bf50-4ac2-bfe6-d3aa7ffbb585.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\seiflegnioui-db5e4e4a-bf50-4ac2-bfe6-d3aa7ffbb585.jpg"
+    }
+  ]
 }

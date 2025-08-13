@@ -8,18 +8,19 @@ namespace p4.controllers
 {
     [ApiController]
     [Route("auth")]
-    public class AuthController(IUserService userService) : ControllerBase
+    public class AuthController(IUserService userService, ILogger<AuthController> log) : ControllerBase
     {
 
         [HttpPost("register")]
         public async Task<IActionResult> Register(UserDTO req)
         {
+            log.LogInformation(req.username);
             var user = await userService.RegisterAsync(req);
             return user == null ? BadRequest("already exist") : Ok(user);
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login(UserDTO req)
+        public async Task<IActionResult> Login(LoginDTO req)
         {
             var user = await userService.LoginAsync(req);
             return user != null ? Ok(user) : BadRequest("Password or email is wrong");
