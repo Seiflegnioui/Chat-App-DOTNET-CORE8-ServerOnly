@@ -16,6 +16,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\achrafhakimi-301fdcd5-1a09-4a58-a351-9c20ebbda1e2.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\gymediah-b4abbbfa-6119-47af-9307-aca249c480b0.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>P4 - Websockets</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/P4 - Websockets</BasePath>
+      <RelativePath>uploads/gymediah-b4abbbfa-6119-47af-9307-aca249c480b0.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\gymediah-b4abbbfa-6119-47af-9307-aca249c480b0.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\seiflegnioui-aea23317-874b-4b25-a731-0f0bc15db079.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>P4 - Websockets</SourceId>

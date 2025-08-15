@@ -29,15 +29,15 @@ namespace p4.Services
                 {
                     return prev_conv.Id;
                 }
-                    var conversation = new Conversation
-                    {
-                        SenderId = senderId,
-                        ReceiverId = conv.ReceiverId,
-                        last_join = conv.last_join
-                    };
-                    var new_conv = await context.Conversations.AddAsync(conversation);
-                    await context.SaveChangesAsync();
-                    return conversation.Id;
+                var conversation = new Conversation
+                {
+                    SenderId = senderId,
+                    ReceiverId = conv.ReceiverId,
+                    last_join = conv.last_join
+                };
+                var new_conv = await context.Conversations.AddAsync(conversation);
+                await context.SaveChangesAsync();
+                return conversation.Id;
             }
             catch (Exception ex)
             {
@@ -45,5 +45,35 @@ namespace p4.Services
                 throw;
             }
         }
+
+      public async Task<List<int>> GetFriends(int myid)
+        {
+            var conversations = await context.Conversations
+                .Where(c => c.ReceiverId == myid || c.SenderId == myid)
+                .Select(c => new
+                {
+                    c.SenderId,
+                    c.ReceiverId
+                })
+                .ToListAsync();
+
+            var friendIds = new List<int>();
+
+            foreach (var row in conversations)
+            {
+                if (row.SenderId == myid)
+                    friendIds.Add(row.ReceiverId); 
+                else
+                    friendIds.Add(row.SenderId); 
+            }
+            friendIds = friendIds.Distinct().ToList();
+            friendIds.ForEach((f =>
+            {
+                logger.LogInformation("Freind : " + f.ToString());
+            })) ;
+
+            return friendIds;
+        }
+
     }
 }

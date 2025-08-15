@@ -10,9 +10,13 @@ namespace p4.Services
     {
         public async Task<List<Msg>> All(int conv)
         {
-            var messages = await context.Msgs.Where(m => m.ConversationID == conv).OrderBy(m=> m.time).ToListAsync();
+            var messages = await context.Msgs.Where(m => m.ConversationID == conv).Include(c=>c.Sender)
+            .Include(c=>c.Receiver).OrderBy(m=> m.time).ToListAsync();
             return messages;
         }
+
+        
+       
 
         public async Task<Msg> Send(MesssageDTO message)
         {
@@ -38,11 +42,11 @@ namespace p4.Services
                 content = message.content,
                 time = DateTime.Now
             };
-            
+
             var m = await context.Msgs.AddAsync(msg);
             await context.SaveChangesAsync();
             return m.Entity;
-    }
+        }
 }
 
 }

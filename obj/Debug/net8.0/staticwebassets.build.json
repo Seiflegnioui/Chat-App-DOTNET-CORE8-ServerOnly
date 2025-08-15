@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qYzUa4vdnUGZayKLTvIFCTAvW1ss3szjPye5QoaB6tQ=",
+  "Hash": "jemDrSj5AV89Qa85dpJDuJkMVRVt/K+GMbmBSsJ6CLg=",
   "Source": "P4 - Websockets",
   "BasePath": "_content/P4 - Websockets",
   "Mode": "Default",
@@ -34,6 +34,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\achrafhakimi-301fdcd5-1a09-4a58-a351-9c20ebbda1e2.png"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Desktop\\Learning\\DOTNET\\P4 - Websockets\\p4\\wwwroot\\uploads\\gymediah-b4abbbfa-6119-47af-9307-aca249c480b0.png",
+      "SourceId": "P4 - Websockets",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Desktop\\Learning\\DOTNET\\P4 - Websockets\\p4\\wwwroot\\",
+      "BasePath": "_content/P4 - Websockets",
+      "RelativePath": "uploads/gymediah-b4abbbfa-6119-47af-9307-aca249c480b0.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\gymediah-b4abbbfa-6119-47af-9307-aca249c480b0.png"
     },
     {
       "Identity": "C:\\Users\\PC\\Desktop\\Learning\\DOTNET\\P4 - Websockets\\p4\\wwwroot\\uploads\\seiflegnioui-aea23317-874b-4b25-a731-0f0bc15db079.jpg",

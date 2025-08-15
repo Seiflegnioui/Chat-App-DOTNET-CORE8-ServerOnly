@@ -29,9 +29,11 @@ namespace p4.Models.Entities
         public User Receiver { get; set; }
 
         [Required]
-        public string content { get; set; } 
+        public string content { get; set; }
 
         [Required]
         public DateTime time { get; set; } = DateTime.Now;
+        
+        public DateTime? seen_time { get; set; } = null;
     }
 }

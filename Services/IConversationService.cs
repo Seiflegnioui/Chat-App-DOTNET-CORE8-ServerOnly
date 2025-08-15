@@ -6,5 +6,6 @@ namespace p4.Services
     public interface IConversationService
     {
         Task<int> StartAsyn(ConvDTO conv);
+        Task<List<int>> GetFriends(int myid);
     }
 }
