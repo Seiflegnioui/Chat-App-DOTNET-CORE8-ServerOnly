@@ -65,9 +65,9 @@ namespace p4.Hubs
                     int.TryParse(convId, out var convParsed))
                 {
                     await Groups.AddToGroupAsync(Context.ConnectionId, $"conv-{convId}");
-                    await messageService.MarkAsSeen(convParsed, parsedUserId);
-
-                    log.LogInformation($"User {parsedUserId} joined conversation group {convId}");
+                    var updatedMessages = await messageService.MarkAsSeen(convParsed, parsedUserId);
+                    await Clients.Group($"conv-{convId}")
+                    .SendAsync("SeenUpdate", updatedMessages);
                 }
                 else
                 {
@@ -102,7 +102,6 @@ namespace p4.Hubs
         public async Task OnMarkSeen(string convId)
         {
             var userId = Context.UserIdentifier;
-            messageService.debug("shiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiit");
             if (!string.IsNullOrEmpty(userId) &&
                 int.TryParse(userId, out var parsedUserId) &&
                 int.TryParse(convId, out var convParsed))
