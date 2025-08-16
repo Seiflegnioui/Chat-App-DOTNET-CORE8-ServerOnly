@@ -25,6 +25,21 @@ namespace p4.controllers
             }
         }
 
+        [HttpGet("unseen/{myId}")]
+        [Authorize]
+        public async Task<IActionResult> GetUnseen(int myId)
+        {
+            try
+            {
+                var obj = await messageService.GetUnseenMessagesAsync(myId);
+                return Ok(obj);
+            }
+            catch (System.Exception ex)
+            {
+                return BadRequest(ex?.Message);
+            }
+        }
+
         [HttpGet("all/{conv}")]
         public async Task<IActionResult> All(int conv)
         {

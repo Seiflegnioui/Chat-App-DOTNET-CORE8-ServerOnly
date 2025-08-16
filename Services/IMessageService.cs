@@ -8,6 +8,7 @@ namespace p4.Services
         Task<Msg> Send(MesssageDTO message);
         Task<List<Msg>> All(int conv);
         Task<List<Msg>> MarkAsSeen(int conv,int userId);
+        Task<List<Msg>> GetUnseenMessagesAsync(int myId);
         void debug(string bulllll);
     }
 }

@@ -46,7 +46,7 @@ namespace p4.Services
             }
         }
 
-      public async Task<List<int>> GetFriends(int myid)
+        public async Task<List<int>> GetFriends(int myid)
         {
             var conversations = await context.Conversations
                 .Where(c => c.ReceiverId == myid || c.SenderId == myid)
@@ -62,15 +62,15 @@ namespace p4.Services
             foreach (var row in conversations)
             {
                 if (row.SenderId == myid)
-                    friendIds.Add(row.ReceiverId); 
+                    friendIds.Add(row.ReceiverId);
                 else
-                    friendIds.Add(row.SenderId); 
+                    friendIds.Add(row.SenderId);
             }
             friendIds = friendIds.Distinct().ToList();
             friendIds.ForEach((f =>
             {
                 logger.LogInformation("Freind : " + f.ToString());
-            })) ;
+            }));
 
             return friendIds;
         }

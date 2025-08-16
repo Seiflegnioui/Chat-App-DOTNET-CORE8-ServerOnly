@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("P4 - Websockets")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e5a87c32137f6a0d46f91ec8afdff297eec90ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e84b7a1bf1774a27d33f81f2d9a79920a1b7331d")]
 [assembly: System.Reflection.AssemblyProductAttribute("P4 - Websockets")]
 [assembly: System.Reflection.AssemblyTitleAttribute("P4 - Websockets")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

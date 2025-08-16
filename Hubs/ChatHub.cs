@@ -99,6 +99,13 @@ namespace p4.Hubs
 
         }
 
+        public async Task OnTyping(string conv)
+        {
+            await Clients.Group($"conv-{conv}").SendAsync("OnTyping");
+
+
+        }
+
         public async Task OnMarkSeen(string convId)
         {
             var userId = Context.UserIdentifier;

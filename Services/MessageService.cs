@@ -16,6 +16,16 @@ namespace p4.Services
             return messages;
         }
 
+        public async Task<List<Msg>> GetUnseenMessagesAsync(int myId)
+        {
+            var result = await context.Msgs
+                .Where(m => m.seen_time == null && m.ReceiverId == myId).ToListAsync();
+
+            return result;
+        }
+
+
+
         public void debug(string bulllll)
         {
             log.LogInformation(bulllll);
