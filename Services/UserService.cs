@@ -12,7 +12,7 @@ using p4.Models.Entities;
 
 namespace p4.Services
 {
-    public class UserService(IConfiguration config,ILogger<UserService> logger ,AppDbContext context, IHttpContextAccessor http) : IUserService
+    public class UserService(IConfiguration config, ILogger<UserService> logger, AppDbContext context, IHttpContextAccessor http) : IUserService
     {
         public async Task<User> CurrentUser()
         {
@@ -77,7 +77,7 @@ namespace p4.Services
             if (!Directory.Exists(folder_path))
                 Directory.CreateDirectory(folder_path);
 
-            var filename = request.username +"-" + Guid.NewGuid().ToString() + Path.GetExtension(request.photo.FileName);
+            var filename = request.username + "-" + Guid.NewGuid().ToString() + Path.GetExtension(request.photo.FileName);
             var filepath = Path.Combine(folder_path, filename);
 
             using (var stream = new FileStream(filepath, FileMode.Create))
@@ -105,6 +105,18 @@ namespace p4.Services
 
             return user;
         }
+
+        public async Task SetOnlineTimeAsync(int id)
+        {
+            var user = await context.Users.FirstOrDefaultAsync(u => u.Id == id);
+            if (user != null)
+            {
+                user.last_seen = DateTime.Now;
+                await context.SaveChangesAsync();
+                logger.LogInformation($"Updated last_seen for user {id} to {user.last_seen}");
+            }
+        }
+
 
         private string CreateToken(User user)
         {

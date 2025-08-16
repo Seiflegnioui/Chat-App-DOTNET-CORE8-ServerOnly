@@ -125,5 +125,7 @@ app.UseAuthorization();
 app.UseStaticFiles();
 app.MapControllers();
 
+app.UseOnline();
+
 app.Run();
 

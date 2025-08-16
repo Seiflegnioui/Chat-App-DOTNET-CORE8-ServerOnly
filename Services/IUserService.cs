@@ -9,5 +9,6 @@ namespace p4.Services
         Task<User> RegisterAsync(UserDTO request);
         Task<string> LoginAsync(LoginDTO request);
         Task<User> CurrentUser();
+        Task SetOnlineTimeAsync(int id);
     }
 }
